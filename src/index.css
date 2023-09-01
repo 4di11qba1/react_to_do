@@ -1,3 +1,8 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,152 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 10px;
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  width: calc(100% - 40px);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.bg-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.content {
+  margin-top: 5px;
+  width: 60%;
+  max-height: calc(100vh - 305px);
+  overflow-y: scroll;
+  padding-bottom: 5px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+/* Hide scrollbar in webkit-based browsers (Chrome, Safari) */
+.content::-webkit-scrollbar {
+  width: 0.5em; /* Set the width of the scrollbar to zero */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hide the thumb */
+}
+
+/* Hide scrollbar in Firefox */
+.content {
+  scrollbar-width: none;
+}
+
+header {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  color: white;
+  transition: all 0.5s;
+}
+
+li:hover {
+  transition: all 0.5s;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+p {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  background-color:rgba(165, 42, 42, 0.623);
+  color: white;
+  width: 100%;
+}
+
+input[type='checkbox'] {
+  width: 50px;
+  height: 50px;
+}
+
+.addSearchForm input[type='text'] {
+  width: 85%;
+  height: 50px;
+  font-size: 40px;
+  color: white;
+  border-width: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.466);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover {
+  color: grey;
+}
+
+button {
+  color: white;
+  background-color: transparent;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  color: white;
+  margin-top: 5px;
 }
